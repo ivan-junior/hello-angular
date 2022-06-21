@@ -7,18 +7,28 @@ import { HelloComponent } from './hello/hello.component';
 import { HelloRoutes } from './hello/hello.routing';
 import { SecondComponent } from './second/second.component';
 import { SecondRoutes } from './second/second.routing';
+import { ChildComponent } from './second/child/child.component';
+import { ThirdComponent } from './third/third.component';
+import { ThirdRoutes } from './third/third.routing';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [		
     AppComponent, 
     HelloComponent, 
-    SecondComponent,
+    SecondComponent, 
+    ChildComponent, 
+    ThirdComponent,
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
     HelloRoutes,
-    SecondRoutes
+    SecondRoutes,
+    ThirdRoutes
   ],
   providers: [],
   bootstrap: [AppComponent]
